@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>oU1TS Question Bank - oU1TSQBank</title>
+  <!-- Google Fonts & FontAwesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Sticky Responsive Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <span>oU1TS QBank</span>
+      </a>
+
+      <nav class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#questions" class="nav-link">Questions</a>
+        <a href="#contributors" class="nav-link">Contributors</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="btn btn-ghost btn-icon theme-toggle" title="Toggle theme">
+          <i class="fa-solid fa-sun sun-icon"></i>
+          <i class="fa-solid fa-moon moon-icon"></i>
+        </button>
+        <a href="#login" class="btn btn-ghost hidden-mobile">Login</a>
+        <button id="upload-trigger-btn" class="btn btn-primary btn-sm hidden-mobile">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i> Upload
+        </button>
+        <button id="mobile-menu-toggle" class="btn btn-ghost btn-icon mobile-menu-toggle" title="Toggle Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-drawer" class="mobile-drawer">
+    <div class="mobile-drawer-content">
+      <div class="mobile-drawer-header">
+        <a href="#home" class="logo">
+          <div class="logo-icon">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+          <span>oU1TS QBank</span>
+        </a>
+        <button id="mobile-drawer-close" class="btn btn-ghost btn-icon" title="Close Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav-menu">
+        <a href="#home" class="mobile-nav-link active">Home</a>
+        <a href="#questions" class="mobile-nav-link">Questions</a>
+        <a href="#contributors" class="mobile-nav-link">Contributors</a>
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
+        <a href="#login" class="mobile-nav-link">Login</a>
+      </nav>
+      <div class="mobile-drawer-footer">
+        <button id="mobile-upload-btn" class="btn btn-primary" style="width: 100%;">
+          <i class="fa-solid fa-arrow-up-from-bracket"></i> Upload Question
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- 1. Home Section -->
+    <section id="home" class="page-section active">
+      <div class="hero-section">
+        <div class="hero-tag">
+          <span>📚</span> oU1TS Community
+        </div>
+        <h1 class="hero-title">oU1TS <span>Question Bank</span></h1>
+        <p class="hero-description">
+          Access past exam questions from all departments and courses. Study smarter with our comprehensive collection
+          of previous year questions organized by semester and exam type.
+        </p>
+        <div class="hero-buttons">
+          <a href="#questions" class="btn btn-primary btn-lg">
+            <i class="fa-solid fa-magnifying-glass"></i> Browse Questions
+          </a>
+          <button id="upload-trigger-hero-btn" class="btn btn-outline btn-lg">
+            <i class="fa-solid fa-arrow-up-from-bracket"></i> Contribute Questions
+          </button>
+        </div>
+      </div>
+
+      <!-- Features Grid -->
+      <div class="features-section">
+        <div class="section-header">
+          <h2>Why Use oU1TS Question Bank?</h2>
+          <p>Everything you need to prepare for your exams. Access, contribute, and study with past questions.</p>
+        </div>
+        <div class="grid-3">
+          <div class="card">
+            <div class="card-icon icon-blue">
+              <i class="fa-solid fa-file-invoice"></i>
+            </div>
+            <h3 class="card-title">Extensive Collection</h3>
+            <p class="card-desc">Access thousands of past exam questions from all departments, courses, and semesters at
+              oU1TS.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon icon-amber">
+              <i class="fa-solid fa-filter"></i>
+            </div>
+            <h3 class="card-title">Smart Filtering</h3>
+            <p class="card-desc">Filter questions by department, course, semester, and exam type to find exactly what
+              you need.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon icon-green">
+              <i class="fa-solid fa-download"></i>
+            </div>
+            <h3 class="card-title">Easy Downloads</h3>
+            <p class="card-desc">Download question papers in PDF format for offline studying and printing.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon icon-purple">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3 class="card-title">Community Driven</h3>
+            <p class="card-desc">Students can contribute by uploading question papers to help fellow students succeed.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon icon-cyan">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3 class="card-title">All Departments</h3>
+            <p class="card-desc">Questions from CSE, EEE, BBA, English, Law, Pharmacy, and all other departments at
+              oU1TS.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon icon-rose">
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h3 class="card-title">Verified Content</h3>
+            <p class="card-desc">All submissions are reviewed to ensure quality and accuracy of the question papers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Questions Section -->
+    <section id="questions" class="page-section">
+      <div class="questions-layout">
+        <div>
+          <h1 class="hero-title" style="text-align: left; font-size: 2.25rem; margin-bottom: 0.5rem;">Question Catalog
+          </h1>
+          <p style="color: var(--muted-foreground); margin-bottom: 1.5rem;">Browse and search past exam questions
+            uploaded by Daffodil International University students.</p>
+        </div>
+
+        <!-- Filter bar -->
+        <div class="filter-bar">
+          <div class="search-wrapper" style="margin-bottom: 1rem;">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="search-input" class="input-control search-input"
+              placeholder="Search by course name, title, department...">
+          </div>
+          <div class="filter-grid">
+            <div class="form-group">
+              <label for="filter-dept">Department</label>
+              <select id="filter-dept" class="select-control">
+                <option value="">All Departments</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-course">Course</label>
+              <select id="filter-course" class="select-control">
+                <option value="">All Courses</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-semester">Semester</label>
+              <select id="filter-semester" class="select-control">
+                <option value="">All Semesters</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="filter-type">Exam Type</label>
+              <select id="filter-type" class="select-control">
+                <option value="">All Exam Types</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Question Cards Grid -->
+        <div id="questions-list" class="grid-3" style="margin-top: 1rem;">
+          <!-- Dynamically populated via app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Contributors Section -->
+    <section id="contributors" class="page-section">
+      <div class="section-header">
+        <h2>Our Contributors</h2>
+        <p>A student-driven project supported by dedicated members of the Daffodil International University community.
+        </p>
+      </div>
+      <div class="contributors-grid">
+        <div class="card contributor-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200"
+            alt="Sarah Connor" class="contributor-avatar">
+          <h3 class="contributor-name">Sarah Connor</h3>
+          <p class="contributor-role">Lead Maintainer</p>
+          <div class="contributor-socials">
+            <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="card contributor-card">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200"
+            alt="Alex Mercer" class="contributor-avatar">
+          <h3 class="contributor-name">Alex Mercer</h3>
+          <p class="contributor-role">Backend Dev</p>
+          <div class="contributor-socials">
+            <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="card contributor-card">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=200"
+            alt="Jane Doe" class="contributor-avatar">
+          <h3 class="contributor-name">Jane Doe</h3>
+          <p class="contributor-role">UI Designer</p>
+          <div class="contributor-socials">
+            <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="card contributor-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=200"
+            alt="David Miller" class="contributor-avatar">
+          <h3 class="contributor-name">David Miller</h3>
+          <p class="contributor-role">Moderator</p>
+          <div class="contributor-socials">
+            <a href="#" class="social-link"><i class="fa-brands fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. About Section -->
+    <section id="about" class="page-section">
+      <div class="about-header">
+        <div class="logo-icon" style="margin: 0 auto 1.5rem auto; height: 3.5rem; width: 3.5rem; font-size: 1.5rem;">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <h1>About oU1TS Question Bank</h1>
+        <p class="hero-description">A student-driven initiative to help oU1TS University students prepare better for
+          their exams by providing access to past questions.</p>
+      </div>
+
+      <div class="sidebar-layout">
+        <div class="sidebar-content">
+          <div class="card" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.5rem; margin-bottom: 1rem;"><i class="fa-solid fa-bullseye"
+                style="color: var(--primary); margin-right: 0.5rem;"></i> Our Mission</h2>
+            <p style="color: var(--muted-foreground); line-height: 1.7;">
+              We believe that every student deserves access to quality study materials. oU1TS Question Bank was created
+              to bridge the gap between students and past exam questions, making it easier for everyone to understand
+              exam patterns, practice effectively, and excel in their academics.
+            </p>
+          </div>
+
+          <h2 style="font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Frequently Asked Questions</h2>
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <div class="card">
+              <h4 style="margin-bottom: 0.5rem;">Is access to oU1TS Question Bank free?</h4>
+              <p class="card-desc">Yes, the platform is 100% free and open to all oU1TS University students.</p>
+            </div>
+            <div class="card">
+              <h4 style="margin-bottom: 0.5rem;">How can I contribute exam papers?</h4>
+              <p class="card-desc">Click on the "Upload" button at the top header, log in, fill in the exam details and
+                upload the PDF file. Submissions are moderated to ensure accuracy.</p>
+            </div>
+            <div class="card">
+              <h4 style="margin-bottom: 0.5rem;">Can I access it offline?</h4>
+              <p class="card-desc">Yes, downloaded PDFs are saved directly to your device and can be viewed anywhere,
+                anytime.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-nav">
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Quick Resources</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem;">
+              <li><a href="#questions" class="btn btn-outline" style="width: 100%; justify-content: flex-start;"><i
+                    class="fa-solid fa-graduation-cap"></i> Browse Question Database</a></li>
+              <li><a href="#contact" class="btn btn-outline" style="width: 100%; justify-content: flex-start;"><i
+                    class="fa-solid fa-envelope"></i> Contact Support</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact" class="page-section">
+      <div class="card form-card">
+        <h1 class="form-title">Contact Us</h1>
+        <p class="form-subtitle">Have questions, feedback, or need help? Send us a message.</p>
+
+        <form id="contact-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="form-group">
+            <label for="contact-name">Full Name</label>
+            <input type="text" id="contact-name" class="input-control" required placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" class="input-control" required placeholder="john@ou1ts.edu.bd">
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" class="input-control" rows="5" required
+              placeholder="Write your feedback or questions here..."
+              style="font-family: var(--font-sans); resize: vertical;"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg" style="margin-top: 0.5rem;">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- 6. Login/Register Section -->
+    <section id="login" class="page-section">
+      <div class="card form-card">
+        <h1 id="auth-title" class="form-title">Welcome Back</h1>
+        <p id="auth-subtitle" class="form-subtitle">Sign in to contribute your question papers</p>
+
+        <form id="auth-form" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="form-group" id="auth-name-group" style="display: none;">
+            <label for="auth-name">Full Name</label>
+            <input type="text" id="auth-name" class="input-control" placeholder="John Doe">
+          </div>
+          <div class="form-group">
+            <label for="auth-email">Email Address</label>
+            <input type="email" id="auth-email" class="input-control" required placeholder="john@ou1ts.edu.bd">
+          </div>
+          <div class="form-group">
+            <label for="auth-password">Password</label>
+            <input type="password" id="auth-password" class="input-control" required placeholder="••••••••">
+          </div>
+          <button type="submit" id="auth-submit-btn" class="btn btn-primary btn-lg" style="margin-top: 0.5rem;">Sign
+            In</button>
+        </form>
+
+        <p class="auth-switch" id="auth-toggle-link">Don't have an account? <span>Register</span></p>
+      </div>
+    </section>
+
+    <!-- 7. Privacy Policy Section -->
+    <section id="privacy" class="page-section">
+      <div class="sidebar-layout">
+        <div class="sidebar-content">
+          <div class="card legal-card">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: June 30, 2026</p>
+
+            <h2>1. Information We Collect</h2>
+            <p>We collect information you provide directly to us, such as when you create an account, upload files, or
+              fill out our contact form. This may include your name, email, and academic details.</p>
+
+            <h2>2. How We Use Information</h2>
+            <p>We use the collected information to maintain our platform, process uploaded papers, send notifications
+              about submissions, and reply to support messages.</p>
+
+            <h2>3. File Submissions</h2>
+            <p>Any PDF exam papers uploaded by registered users will be made publicly available to other visitors of the
+              platform. Please verify that uploads do not contain sensitive personal information before submitting.</p>
+          </div>
+        </div>
+        <div class="sidebar-nav">
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Legal Pages</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><a href="#privacy" class="nav-link active">Privacy Policy</a></li>
+              <li><a href="#terms" class="nav-link">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Terms of Service Section -->
+    <section id="terms" class="page-section">
+      <div class="sidebar-layout">
+        <div class="sidebar-content">
+          <div class="card legal-card">
+            <h1>Terms of Service</h1>
+            <p>Last updated: June 30, 2026</p>
+
+            <h2>1. Acceptance of Terms</h2>
+            <p>By accessing or using oU1TS Question Bank, you agree to comply with and be bound by these Terms of
+              Service.</p>
+
+            <h2>2. User Content & Contributions</h2>
+            <p>Users who upload question papers warrant that they have the right to share the file, that it contains
+              public academic materials, and that the upload does not infringe on any intellectual property rights.</p>
+
+            <h2>3. Prohibited Conduct</h2>
+            <p>You agree not to upload any malicious code, spam, advertisements, or exam papers that are explicitly
+              prohibited from public sharing by university policies.</p>
+          </div>
+        </div>
+        <div class="sidebar-nav">
+          <div class="card">
+            <h3 style="margin-bottom: 1rem;">Legal Pages</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.5rem;">
+              <li><a href="#privacy" class="nav-link">Privacy Policy</a></li>
+              <li><a href="#terms" class="nav-link active">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Upload Modal Backdrop -->
+  <div id="upload-modal" class="modal-backdrop">
+    <div class="modal-content">
+      <button id="modal-close-btn" class="modal-close"><i class="fa-solid fa-xmark"></i></button>
+      <h2 style="margin-bottom: 0.5rem;"><i class="fa-solid fa-arrow-up-from-bracket"
+          style="color: var(--primary); margin-right: 0.5rem;"></i> Upload Question Paper</h2>
+      <p style="color: var(--muted-foreground); margin-bottom: 1.5rem; font-size: 0.9rem;">Submit past exam papers to
+        the database and support the student community.</p>
+
+      <form id="upload-form" style="display: flex; flex-direction: column; gap: 1rem;">
+        <div class="form-group">
+          <label for="up-title">Course Title</label>
+          <input type="text" id="up-title" class="input-control" required placeholder="e.g. Computer Networks">
+        </div>
+        <div class="form-group">
+          <label for="up-dept">Department</label>
+          <select id="up-dept" class="select-control" required>
+            <option value="">Select Department</option>
+            <option value="CSE">CSE</option>
+            <option value="EEE">EEE</option>
+            <option value="BBA">BBA</option>
+            <option value="Pharmacy">Pharmacy</option>
+            <option value="Law">Law</option>
+            <option value="English">English</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="up-semester">Semester</label>
+          <input type="text" id="up-semester" class="input-control" required placeholder="e.g. Summer 26">
+        </div>
+        <div class="form-group">
+          <label for="up-type">Exam Type</label>
+          <select id="up-type" class="select-control" required>
+            <option value="">Select Exam Type</option>
+            <option value="Quiz">Quiz</option>
+            <option value="Mid">Mid</option>
+            <option value="Final">Final</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="up-file">Select PDF File</label>
+          <input type="file" id="up-file" class="input-control" accept=".pdf" required style="padding: 0.4rem;">
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-top: 0.5rem; padding: 0.75rem;">Submit
+          Paper</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Center -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-grid">
+        <div class="footer-col" style="grid-column: span 1;">
+          <a href="#home" class="logo" style="margin-bottom: 1rem;">
+            <div class="logo-icon">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <span>oU1TS QBank</span>
+          </a>
+          <p style="color: var(--muted-foreground); font-size: 0.85rem; line-height: 1.6;">
+            Access past exam questions from oU1TS University. Study smarter with our comprehensive question bank.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#questions">Browse Questions</a></li>
+            <li><a href="#contributors">Contributors</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="#login">Login</a></li>
+            <li><a href="#login">Register</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 oU1TS Question Bank. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
